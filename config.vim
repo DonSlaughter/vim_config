@@ -1,5 +1,5 @@
 "Configuration and functions
-
+set shortmess+=I "Disable Intro Message
 set encoding=utf-8
 set cursorline
 set wildmenu
@@ -11,6 +11,15 @@ set nocompatible
 set history=500
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 filetype plugin indent on
+
+"Backup, Undo & Swap
+set backup
+set backupdir=~/.vim/.backup
+
+set undofile
+set undodir=~/.vim/.undo
+
+set directory=~/.vim/.swap
 
 "Left Colums Signal allways on that the text wont jump on signal and numbers
 "with relativenumber online switch with CTRL + n
@@ -59,10 +68,14 @@ let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 
 "FZF
+command! -bang -nargs=? -complete=dir HFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'rg --hidden -l ""'}, <bang>0)
+
 noremap <leader>h <Esc>:Helptags<CR>
 noremap <leader>b <Esc>:Buffers<CR>
 noremap <leader>t <Esc>:Tags<CR>
-noremap <leader>f <Esc>:FZF<CR>
+noremap <leader>f <Esc>:Files<CR>
+noremap <leader>F <Esc>:HFiles<CR>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],

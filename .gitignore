@@ -2,6 +2,11 @@
 autoload/
 plugged/
 
+#backup, undo & swap
+.backup
+.swap
+.undo
+
 # files
 
 .netrwhist
