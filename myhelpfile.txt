@@ -1,0 +1,7 @@
+Important shortcuts 
+automatic reformat:
+	Visual Line Select + gq 
+
+split windows 
+	Ctrl + H,J,K,L moves split to position.
+

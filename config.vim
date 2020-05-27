@@ -49,7 +49,6 @@ au BufRead,BufNewFile *.tex setlocal textwidth=80
 
 nmap <F8> :TagbarToggle<CR>
 
-
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
@@ -112,4 +111,14 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+" Navigation
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>  
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
 
+nnoremap j gj
+nnoremap gj j
+
+nnoremap k gk
+nnoremap gk k
