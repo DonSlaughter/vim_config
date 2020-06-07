@@ -12,6 +12,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'vim-python/python-syntax'
 

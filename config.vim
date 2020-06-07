@@ -42,6 +42,10 @@ nnoremap <silent> <esc> :noh<return><esc>
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'evince'
 
+"Nerdtree
+map <F6> :NERDTreeToggle <CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 set spelllang=de
 "autocmd FileType tex setlocal spell
 au BufRead,BufNewFile *.tex setlocal textwidth=80
@@ -113,7 +117,7 @@ nnoremap <A-l> <C-w>l
 
 " Navigation
 inoremap <C-h> <Left>
-inoremap <C-j> <Down>  
+inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
