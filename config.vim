@@ -1,25 +1,49 @@
 "Configuration and functions
-set shortmess+=I "Disable Intro Message
 set encoding=utf-8
 set cursorline
 set wildmenu
 set hidden
 "set cmdheight=2
 set updatetime=300
-set shortmess+=c
 set nocompatible
 set history=500
+set scrolloff=3
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 filetype plugin indent on
 
+"Shortmess
+set shortmess+=I "Disable Intro Message
+set shortmess+=c
+set shortmess+=A
+set shortmess+=W
+
 "Backup, Undo & Swap
-set backup
-set backupdir=~/.vim/.backup
+"dont create backup files as root user
+if exists('$SUDO_USER')
+	set nobackup
+	set nowritebackup
+else
+	set backup
+	set backupdir=~/.vim/.backup
+endif
 
-set undofile
-set undodir=~/.vim/.undo
+"dont create swap files as root user
+if exists('$SUDO_USER')
+	set noswapfile
+else
+	set directory=~/.vim/.swap//
+endif
 
-set directory=~/.vim/.swap
+"dont create undo files as root user
+if has('persistent_undo')
+	if exists('$SUDO_USER')
+		set noundofile
+	else
+		set undofile
+		set undodir=~/.vim/.undo
+	endif
+endif
+
 
 "Left Colums Signal allways on that the text wont jump on signal and numbers
 "with relativenumber online switch with CTRL + n
@@ -30,6 +54,9 @@ nnoremap <C-n> :let[&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
 "White Characters switch on an off with leader (,) w
 set listchars=eol:$,tab:\|\ ,trail:~,extends:>,precedes:<,space:·
 noremap <leader>w <ESC>:set list! <CR>
+
+"unrestricted backspacing in insert mode
+set backspace=indent,start,eol
 
 "Searching
 set incsearch
@@ -95,11 +122,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col -1] =~# '\s'
-endfunction
+if has('virtualedit')
+	set virtualedit=block
+endif
 
 " Window movement mappings
 tnoremap <A-h> <C-\><C-N><C-w>h
@@ -126,3 +151,7 @@ nnoremap gj j
 
 nnoremap k gk
 nnoremap gk k
+
+"Command mode mappings
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
