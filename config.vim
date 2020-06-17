@@ -3,11 +3,12 @@ set encoding=utf-8
 set cursorline
 set wildmenu
 set hidden
-"set cmdheight=2
 set updatetime=300
 set nocompatible
 set history=500
 set scrolloff=3
+set mouse=a
+set clipboard=unnamed
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 filetype plugin indent on
 
@@ -139,6 +140,12 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Window scaling
+nnoremap <C-Up> <C-w>+
+nnoremap <C-Down> <C-w>-
+nnoremap <C-Right> <C-w>>
+nnoremap <C-Left> <C-w><
 
 " Navigation
 inoremap <C-h> <Left>
