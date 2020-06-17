@@ -11,6 +11,8 @@ set mouse=a
 set clipboard=unnamed
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 filetype plugin indent on
+"unrestricted backspacing in insert mode
+set backspace=indent,start,eol
 
 "Shortmess
 set shortmess+=I "Disable Intro Message
@@ -56,8 +58,6 @@ nnoremap <C-n> :let[&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
 set listchars=eol:$,tab:\|\ ,trail:~,extends:>,precedes:<,space:·
 noremap <leader>w <ESC>:set list! <CR>
 
-"unrestricted backspacing in insert mode
-set backspace=indent,start,eol
 
 "Searching
 set incsearch
@@ -71,7 +71,6 @@ let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'evince'
 
 "Nerdtree
-map <F6> :NERDTreeToggle <CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set spelllang=de
@@ -79,22 +78,12 @@ set spelllang=de
 au BufRead,BufNewFile *.tex setlocal textwidth=80
 " toggle relative line numbers with Ctrl + N
 
-nmap <F8> :TagbarToggle<CR>
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 set termguicolors
 
-"colorscheme dracula
-"let g:dracula_italic = 1
-"let g:dracula_bold = 1
-"let g:dracula_underline = 1
-"let g:dracula_undercurl = 1
-"let g:dracula_inverse = 1
-"let g:dracula_colorterm = 1
-
-"let g:airline_theme='dracula'
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 
@@ -102,11 +91,6 @@ let g:airline_powerline_fonts=1
 command! -bang -nargs=? -complete=dir HFiles
   \ call fzf#vim#files(<q-args>, {'source': 'rg --hidden -l ""'}, <bang>0)
 
-noremap <leader>h <Esc>:Helptags<CR>
-noremap <leader>b <Esc>:Buffers<CR>
-noremap <leader>t <Esc>:Tags<CR>
-noremap <leader>f <Esc>:Files<CR>
-noremap <leader>F <Esc>:HFiles<CR>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -126,39 +110,3 @@ let g:fzf_colors =
 if has('virtualedit')
 	set virtualedit=block
 endif
-
-" Window movement mappings
-tnoremap <A-h> <C-\><C-N><C-w>h
-tnoremap <A-j> <C-\><C-N><C-w>j
-tnoremap <A-k> <C-\><C-N><C-w>k
-tnoremap <A-l> <C-\><C-N><C-w>l
-inoremap <A-h> <C-\><C-N><C-w>h
-inoremap <A-j> <C-\><C-N><C-w>j
-inoremap <A-k> <C-\><C-N><C-w>k
-inoremap <A-l> <C-\><C-N><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-
-" Window scaling
-nnoremap <C-Up> <C-w>+
-nnoremap <C-Down> <C-w>-
-nnoremap <C-Right> <C-w>>
-nnoremap <C-Left> <C-w><
-
-" Navigation
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-
-nnoremap j gj
-nnoremap gj j
-
-nnoremap k gk
-nnoremap gk k
-
-"Command mode mappings
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
