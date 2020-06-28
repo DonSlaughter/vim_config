@@ -20,6 +20,9 @@ set shortmess+=c
 set shortmess+=A
 set shortmess+=W
 
+"Disables Automatic Commenting on new line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 "Backup, Undo & Swap
 "dont create backup files as root user
 if exists('$SUDO_USER')
@@ -47,17 +50,15 @@ if has('persistent_undo')
 	endif
 endif
 
-
-"Left Colums Signal allways on that the text wont jump on signal and numbers
 "with relativenumber online switch with CTRL + n
 set number relativenumber
-set signcolumn=yes
 nnoremap <C-n> :let[&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
+"Left Colums Signal allways on that the text wont jump on signal and numbers
+set signcolumn=yes
 
 "White Characters switch on an off with leader (,) w
 set listchars=eol:$,tab:\|\ ,trail:~,extends:>,precedes:<,space:·
 noremap <leader>w <ESC>:set list! <CR>
-
 
 "Searching
 set incsearch
@@ -78,7 +79,6 @@ set spelllang=de
 au BufRead,BufNewFile *.tex setlocal textwidth=80
 " toggle relative line numbers with Ctrl + N
 
-
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
@@ -90,7 +90,6 @@ let g:airline_powerline_fonts=1
 "FZF
 command! -bang -nargs=? -complete=dir HFiles
   \ call fzf#vim#files(<q-args>, {'source': 'rg --hidden -l ""'}, <bang>0)
-
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -110,3 +109,7 @@ let g:fzf_colors =
 if has('virtualedit')
 	set virtualedit=block
 endif
+
+"Automatically deletes all trailing whitespace and newlines at end of file on save.
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e

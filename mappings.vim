@@ -34,6 +34,8 @@ nnoremap gk k
 "Command mode mappings
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+"Saves files as sudo on files that require root privileges
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 "----
 "Plugin mappings

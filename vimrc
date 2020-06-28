@@ -7,7 +7,7 @@ let mapleader = ","
 "Configuration of Vim and part of Plugins
 source ~/.vim/config.vim
 
-"Window movement
+"Mappings for Vim and Plugins
 source ~/.vim/mappings.vim
 
 "Configuration of COC is seperated from the standard config File
