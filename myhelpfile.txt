@@ -1,7 +1,9 @@
-Important shortcuts 
+Important shortcuts
 automatic reformat:
-	Visual Line Select + gq 
+	Visual Line Select + gq
 
-split windows 
+split windows
 	Ctrl + H,J,K,L moves split to position.
 
+moving lines in visualmode
+	select lines and move with J & K
