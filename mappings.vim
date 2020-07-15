@@ -51,10 +51,15 @@ xnoremap <silent> J :call functions#move_down()<CR>
 "FZF mappings
 "Hfiles defined in config.vim
 noremap <leader>h <Esc>:Helptags<CR>
+noremap <leader>H <Esc>:History:<CR>
 noremap <leader>b <Esc>:Buffers<CR>
 noremap <leader>t <Esc>:Tags<CR>
 noremap <leader>f <Esc>:Files<CR>
 noremap <leader>F <Esc>:HFiles<CR>
+noremap <leader>l <Esc>:BLines<CR>
+noremap <leader>L <Esc>:Lines<CR>
+noremap <leader>r <Esc>:Rg<CR>
+noremap <leader>m <Esc>:Marks<CR>
 
 "NERDTree
 map <F6> :NERDTreeToggle <CR>
