@@ -70,6 +70,7 @@ nnoremap <silent> <esc> :noh<return><esc>
 "Latex stuff
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_previewer = 'evince'
+let g:tex_flavor = "plain"
 
 "Nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -105,6 +106,8 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Comment' } }
 
 if has('virtualedit')
 	set virtualedit=block
