@@ -1,5 +1,7 @@
 "substitute with leader and 's'
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+"Allways very-magic search
+nnoremap / /\v
 
 " Window movement mappings
 " Using Alt & movementkeys instead of Ctrl + w
