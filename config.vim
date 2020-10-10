@@ -68,9 +68,7 @@ set smartcase
 nnoremap <silent> <esc> :noh<return><esc>
 
 "Latex stuff
-let g:livepreview_engine = 'pdflatex'
-let g:livepreview_previewer = 'evince'
-let g:tex_flavor = "plain"
+let g:tex_flavor = 'latex'
 
 "Nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
