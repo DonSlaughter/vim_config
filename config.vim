@@ -14,6 +14,14 @@ filetype plugin indent on
 "unrestricted backspacing in insert mode
 set backspace=indent,start,eol
 
+"Tab an spaces
+set expandtab
+"expandtab writes tab as spaces
+"tab character can be written with CTRL-V<Tab>
+set tabstop=4
+"all existing tab characters will be changed to 4 spaces
+set shiftwidth=4
+
 "Shortmess
 set shortmess+=I "Disable Intro Message
 set shortmess+=c
@@ -26,28 +34,28 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Backup, Undo & Swap
 "dont create backup files as root user
 if exists('$SUDO_USER')
-	set nobackup
-	set nowritebackup
+    set nobackup
+    set nowritebackup
 else
-	set backup
-	set backupdir=~/.vim/.backup
+    set backup
+    set backupdir=~/.vim/.backup
 endif
 
 "dont create swap files as root user
 if exists('$SUDO_USER')
-	set noswapfile
+    set noswapfile
 else
-	set directory=~/.vim/.swap//
+    set directory=~/.vim/.swap//
 endif
 
 "dont create undo files as root user
 if has('persistent_undo')
-	if exists('$SUDO_USER')
-		set noundofile
-	else
-		set undofile
-		set undodir=~/.vim/.undo
-	endif
+    if exists('$SUDO_USER')
+        set noundofile
+    else
+        set undofile
+        set undodir=~/.vim/.undo
+    endif
 endif
 
 "with relativenumber online switch with CTRL + n
@@ -108,7 +116,7 @@ let g:fzf_colors =
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'highlight': 'Comment' } }
 
 if has('virtualedit')
-	set virtualedit=block
+    set virtualedit=block
 endif
 
 "Automatically deletes all trailing whitespace and newlines at end of file on save.
