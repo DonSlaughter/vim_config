@@ -15,11 +15,11 @@ filetype plugin indent on
 set backspace=indent,start,eol
 
 "Tab an spaces
-set expandtab
 "expandtab writes tab as spaces
 "tab character can be written with CTRL-V<Tab>
-set tabstop=4
+"set expandtab
 "all existing tab characters will be changed to 4 spaces
+"set tabstop=4
 set shiftwidth=4
 
 "Shortmess
@@ -122,3 +122,7 @@ endif
 "Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
+
+"FileType specific tabs:
+"Yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

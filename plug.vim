@@ -1,3 +1,10 @@
+"automatic installation for vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 "FZF fuzzy finder
 "using fzf in arch repository
@@ -15,6 +22,9 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'vim-python/python-syntax'
+
+"Ansible"
+Plug 'pearofducks/ansible-vim'
 
 "Snipplets
 "Plug 'SirVer/ultisnips'
