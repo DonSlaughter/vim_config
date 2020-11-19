@@ -10,6 +10,10 @@ call plug#begin('~/.vim/plugged')
 "using fzf in arch repository
 "Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+"if fzf is installed via git
+if !empty(glob("~/.fzf/bin/fzf"))
+    set rtp+=~/.fzf
+endif
 
 "Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
