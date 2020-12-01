@@ -4,7 +4,7 @@ set cursorline
 set wildmenu
 set hidden
 set updatetime=300
-set nocompatible
+set nocompatible "nvim is allway nocompatible
 set history=500
 set scrolloff=3
 set mouse=a
@@ -67,6 +67,9 @@ set signcolumn=yes
 "White Characters switch on an off with leader (,) w
 set listchars=eol:$,tab:\|\ ,trail:~,extends:>,precedes:<,space:·
 noremap <leader>w <ESC>:set list! <CR>
+
+" Character to show before the lines that have been soft-wrapped
+set showbreak=↪
 
 "Searching
 set incsearch
