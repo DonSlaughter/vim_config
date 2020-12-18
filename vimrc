@@ -14,5 +14,4 @@ source ~/.vim/functions.vim
 source ~/.vim/mappings.vim
 
 "Configuration of COC is seperated from the standard config File
-"other plugins will follow
 source ~/.vim/coc_config.vim

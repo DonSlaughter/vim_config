@@ -7,6 +7,8 @@ set updatetime=300
 set nocompatible "nvim is allway nocompatible
 set history=500
 set scrolloff=3
+set splitbelow
+set splitright
 set mouse=a
 set clipboard=unnamed
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -58,8 +60,8 @@ if has('persistent_undo')
     endif
 endif
 
-"with relativenumber online switch with CTRL + n
 set number relativenumber
+" toggle relative line numbers with Ctrl + N
 nnoremap <C-n> :let[&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>
 "Left Colums Signal allways on that the text wont jump on signal and numbers
 set signcolumn=yes
@@ -87,7 +89,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 set spelllang=de
 "autocmd FileType tex setlocal spell
 au BufRead,BufNewFile *.tex setlocal textwidth=80
-" toggle relative line numbers with Ctrl + N
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
