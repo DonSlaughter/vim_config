@@ -21,7 +21,8 @@ set backspace=indent,start,eol
 "tab character can be written with CTRL-V<Tab>
 "set expandtab
 "all existing tab characters will be changed to 4 spaces
-"set tabstop=4
+set noexpandtab
+set tabstop=4
 set shiftwidth=4
 
 "Shortmess
