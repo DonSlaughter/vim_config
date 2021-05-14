@@ -1,9 +1,16 @@
 Important shortcuts
-automatic reformat:
-	Visual Line Select + gq
 
 split windows
 	Ctrl + H,J,K,L moves split to position.
 
 moving lines in visualmode
 	select lines and move with J & K
+
+g commands:
+	g0 and g$ first and last character on broken line
+	gq longline into multiple lines
+	gu and gU Uncapitalize and capitalize text object
+	~ and g~ switch capitalization of letter
+	gf open highlighted text (file)
+	gv reselect previous selected text
+	g& rerun substitute command for all lines
