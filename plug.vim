@@ -28,7 +28,7 @@ Plug 'preservim/nerdtree'
 "Plug 'vim-python/python-syntax'
 
 "Ansible"
-Plug 'pearofducks/ansible-vim'
+"Plug 'pearofducks/ansible-vim'
 
 "Snipplets
 "Plug 'SirVer/ultisnips'
@@ -40,7 +40,9 @@ Plug 'tpope/vim-fugitive'
 "Latex stuff
 Plug 'lervag/vimtex'
 
+"Change Surroundings of text objects. "-> '
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
+"Look at clipboard
 Plug 'junegunn/vim-peekaboo'
 call plug#end()
