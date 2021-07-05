@@ -16,12 +16,17 @@ if !empty(glob("~/.fzf/bin/fzf"))
 endif
 
 "Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+
+"Treesitter
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "look & themes & syntax
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'dracula/vim'
+"Plug 'dracula/vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 "Plug 'sheerun/vim-polyglot'
@@ -45,4 +50,5 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 "Look at clipboard
 Plug 'junegunn/vim-peekaboo'
+
 call plug#end()
