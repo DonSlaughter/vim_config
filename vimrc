@@ -15,5 +15,10 @@ source ~/.vim/mappings.vim
 
 "Configuration of COC is seperated from the standard config File
 "source ~/.vim/coc_config.vim
+source ~/.vim/lspconfig/compe-config.lua
+source ~/.vim/lspconfig/lspconfig.vim
+source ~/.vim/lspconfig/pyright.lua
+source ~/.vim/lspconfig/bashls.lua
+source ~/.vim/lspconfig/clangd.lua
 
 "Configuration of NVIM Autocomplete LSP
