@@ -21,7 +21,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
 "Treesitter
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "look & themes & syntax
 Plug 'ryanoasis/vim-devicons'
@@ -36,8 +36,8 @@ Plug 'preservim/nerdtree'
 "Plug 'pearofducks/ansible-vim'
 
 "Snipplets
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 "Git stuff
 Plug 'tpope/vim-fugitive'

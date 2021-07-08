@@ -131,3 +131,8 @@ autocmd BufWritepre * %s/\n\+\%$//e
 "FileType specific tabs:
 "Yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']
