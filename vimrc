@@ -19,5 +19,7 @@ source ~/.vim/lspconfig/lspconfig.vim
 source ~/.vim/lspconfig/pyright.lua
 source ~/.vim/lspconfig/bashls.lua
 source ~/.vim/lspconfig/clangd.lua
+source ~/.vim/lspconfig/texlab.lua
+
 
 source ~/.vim/treesitter-conf.lua
