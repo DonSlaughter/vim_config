@@ -11,6 +11,7 @@ set splitbelow
 set splitright
 set mouse=a
 set clipboard=unnamed
+set list
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 filetype plugin indent on
 "unrestricted backspacing in insert mode
