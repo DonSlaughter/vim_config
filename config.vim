@@ -6,7 +6,7 @@ set hidden
 set updatetime=300
 set nocompatible "nvim is allway nocompatible
 set history=500
-set scrolloff=3
+set scrolloff=10
 set splitbelow
 set splitright
 set mouse=a

@@ -21,5 +21,6 @@ source ~/.vim/lspconfig/bashls.lua
 source ~/.vim/lspconfig/clangd.lua
 source ~/.vim/lspconfig/texlab.lua
 
+source ~/.vim/treesitter.lua
 
-source ~/.vim/treesitter-conf.lua
+"source ~/.vim/treesitter-conf.lua
