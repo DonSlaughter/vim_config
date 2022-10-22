@@ -93,7 +93,7 @@ set spelllang=de
 au BufRead,BufNewFile *.tex setlocal textwidth=80
 
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme monokai
 set background=dark
 set termguicolors
 
